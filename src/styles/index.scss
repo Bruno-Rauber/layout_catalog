@@ -107,6 +107,9 @@ body {
   &:hover {
     background-color: variables.$white;
     color: variables.$blue-accent;
+    transition:
+      background-color 300ms,
+      color 300ms;
   }
 }
 
@@ -121,23 +124,23 @@ body {
   margin-top: 110px;
   margin-left: 40px;
   margin-right: 40px;
-  padding: 50px 40px;
-  perspective: 100px;
+  padding: variables.$padding-main;
 
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
-  gap: 48px 46px;
+  gap: variables.$gap-main;
 
   &__card {
     transition: transform 300ms;
   }
 
   &__card:hover {
-    transform: translateZ(20px);
+    transform: scale(1.2);
     .card__text {
       color: #34568b;
+      transition: color 300ms;
     }
   }
 }
@@ -164,11 +167,6 @@ body {
 
 // #region Header
 .header {
-  --tom-branco: #fff;
-  --tom-azul: #00acdc;
-  --tom-preto: #000;
-  --fundo: #e7edea;
-
   font-family: Roboto, sans-serif;
   font-weight: 500;
   box-sizing: border-box;
@@ -177,7 +175,7 @@ body {
   margin: 0;
   display: flex;
   align-items: center;
-  background-color: var(--tom-branco);
+  background-color: variables.$white;
   justify-content: space-between;
 }
 
@@ -206,7 +204,7 @@ li {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--tom-preto);
+  color: variables.$main-accent;
   font-size: 12px;
   line-height: 100%;
   padding: 0;
@@ -231,11 +229,12 @@ ul li:nth-child(8) {
 }
 
 .nav__link:hover {
-  color: #34568b;
+  color: variables.$blue-accent;
+  transition: color 300ms;
 }
 
 ul li:nth-child(1) a {
-  color: var(--tom-azul);
+  color: variables.$blue-accent;
 }
 
 .is-active {
@@ -249,7 +248,7 @@ ul li:nth-child(1) a {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--tom-azul);
+  background-color: variables.$blue-accent;
   bottom: 0;
 }
 
