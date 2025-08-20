@@ -5,13 +5,10 @@ body {
   box-sizing: border-box;
 }
 
-.catolog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.catalog {
   box-sizing: border-box;
-  width: 1.02px;
-  height: 1.04px;
+  width: 1,024px;
+  height: 1,044px;
 }
 
 // #region Card
@@ -118,9 +115,8 @@ body {
 // #region Main
 .main {
   --column-count: 1;
-
-  width: 944px;
-  height: 862px;
+  width: 100%;
+  max-width: 944px;
   margin-top: 110px;
   margin-left: 40px;
   margin-right: 40px;
@@ -128,7 +124,6 @@ body {
 
   display: grid;
   grid-template-columns: repeat(var(--column-count), 1fr);
-  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   gap: variables.$gap-main;
 
